@@ -1,0 +1,18 @@
+<div *ngIf="profile == null" >
+    <h3>I'm sorry but you aren't logged! Please login first.</h3>
+</div>
+<div *ngIf="profile != null" >
+    <h3>Your Profile</h3>
+<ul>
+    <li>Username: {{ profile.username }}</li>
+    <li>User ID: {{ profile.id }} </li>
+    <li id="webName">Webname: {{ profile.webName }} </li>
+</ul>
+<button (click)="deleteProfile()" >Delete Your Account</button><button (click)="updateProfile()" >Update Your Details</button>       
+    <div id="profileUpdate" class="nosee">  
+        <form [formGroup]="form" (ngSubmit)="submitForm()" >
+            <input class="form-control" placeholder="Webname" formControlName="webname">
+           <button class="btn" >Update</button>
+       </form> 
+    </div>
+</div>

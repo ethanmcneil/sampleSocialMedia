@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    color: darkorange;
+}
+
+.btn, .bigContainer button {
+    padding: 10px;
+    border: 2px solid black;
+    background:orange;
+    color: white;
+    width: 100%;
+    margin: 10px auto;
+}
+
+footer {
+    font-size: .75em;
+    position: static;
+    bottom: 0px;
+    margin: 50px auto 0px auto;
+    border-top: 1px solid black;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+}

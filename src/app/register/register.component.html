@@ -1,0 +1,7 @@
+<H3>Let's Register To Get Started!</H3>
+<form [formGroup]="form" (ngSubmit)="submitForm()" >
+     <input class="form-control" placeholder="Username" formControlName="username">
+     <input class="form-control" placeholder="Password" formControlName="password">
+     <input class="form-control" placeholder="Webname" formControlName="webname">
+    <button class="btn" >Register</button>
+</form>

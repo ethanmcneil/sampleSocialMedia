@@ -1,0 +1,10 @@
+<div *ngIf="userN == null" >
+    <h3>I'm sorry but you aren't logged! Please login first.</h3>
+</div>
+<div *ngIf="userN != null" >
+    <h3>Craft Your Message!</h3>
+<form [formGroup]="postForm" (ngSubmit)="submitForm()" >
+    <textarea class="form-control" placeholder="What would you like to say?" formControlName="message"></textarea>
+   <button class="btn" type="submit">Post</button>
+</form>
+</div>

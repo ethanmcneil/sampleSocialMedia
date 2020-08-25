@@ -1,0 +1,21 @@
+<div *ngIf="userN == null" >
+    <h3>I'm sorry but you aren't logged! Please login first.</h3>
+</div>
+<div *ngIf="userN != null" >
+<h3>Here is your post feed</h3>
+<div class="container">
+    <div class="messageHead" *ngFor="let postData of postData" >
+        <div class="message">{{ postData.message }}</div>
+        <div class="author">Written by {{ postData.author }} on {{ postData.timeStamp }}</div>
+        <div *ngIf="postData.author === userN">
+            <button (click)="deletePost(postData.id)" >Delete Your Post</button><button (click)="updatePosts()" >Update Your Post</button>
+            <span id="newText" class="noShow">
+                <form [formGroup]="postForm" (ngSubmit)="submitForm(postData.id)" >
+                    <textarea class="form-control" placeholder="{{postData.message}}" formControlName="message"></textarea>
+                   <button class="btn" type="submit" >Submit Updated Data</button>
+                </form>
+            </span>
+        </div>
+    </div>
+</div>
+</div>

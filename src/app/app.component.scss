@@ -1,0 +1,20 @@
+.bigContainer {
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 500px;
+    width: 90%;
+}
+nav {
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 600px;
+    width: 90%;
+    ul {
+        display:flex;
+        justify-content: center;
+        li {
+            align-content: center;
+        }
+    }
+
+}
